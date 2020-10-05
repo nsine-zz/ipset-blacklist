@@ -111,3 +111,7 @@ if [[ ${VERBOSE:-no} == yes ]]; then
   echo
   echo "Blacklisted addresses found: $(wc -l "$IP_BLACKLIST" | cut -d' ' -f1)"
 fi
+
+# Process whitelist
+bash /usr/local/sbin/update-whitelist.sh /etc/ipset-blacklist/ipset-whitelist.list
+
